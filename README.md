@@ -1,5 +1,5 @@
 # TJJ-Android-Web
-将android作为服务器,webview作为访问端,实现mvc操作的实践
+Android自定义混合开发框架
 # 用法
 ### 1. 自定义一个Test类
 ```
