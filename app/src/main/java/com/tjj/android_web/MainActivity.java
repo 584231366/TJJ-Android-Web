@@ -15,6 +15,7 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Toast;
 
+import com.tjj.android_web.controllers.ToastController;
 import com.tjj.android_web.utils.JSBridge;
 
 import org.json.JSONException;
@@ -33,5 +34,6 @@ public class MainActivity extends AppCompatActivity {
         mContext = this;
 
         JSBridge mJSBridge = new JSBridge(mContext,findViewById(R.id.view_container));
+        mJSBridge.registerJSObject("toast",new ToastController(mContext));
     }
 }

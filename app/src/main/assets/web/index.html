@@ -2,12 +2,18 @@
 <html>
 <head>
 	<title>测试</title>
-	<link rel="stylesheet" type="text/css" href="./style.css">
-	<script type="text/javascript">
-
-	</script>
 </head>
 <body>
-	本地html
+	<strong>toast控制测试</strong> <br/>
+	<button onclick="shortToast()">short信息</button>
+	<button onclick="longToast()">long信息</button>
+	<script>
+		function shortToast(){
+			JSBridge.request("toast.shortToast","short信息")
+		}
+		function longToast(){
+			JSBridge.request("toast.longToast","long信息")
+		}
+	</script>
 </body>
 </html>

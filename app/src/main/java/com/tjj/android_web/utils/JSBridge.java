@@ -128,9 +128,16 @@ public class JSBridge {
             }
             return null;
         }
-        public JSONObject getData(){
+        public JSONObject getDataAsJSONObject(){
             try {
                 return json.getJSONObject("data");
+            } catch (JSONException e) {
+                return null;
+            }
+        }
+        public String getDataAsString(){
+            try {
+                return json.getString("data");
             } catch (JSONException e) {
                 return null;
             }
