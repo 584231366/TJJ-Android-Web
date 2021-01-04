@@ -4,7 +4,8 @@
 	<title>测试</title>
 </head>
 <body>
-	<strong>toast控制测试</strong> <br/>
+	<strong>toast控制测试</strong>
+	<br/>
 	<button onclick="shortToast()">short信息</button>
 	<button onclick="longToast()">long信息</button>
 	<script>
@@ -13,6 +14,19 @@
 		}
 		function longToast(){
 			JSBridge.request("toast.longToast","long信息")
+		}
+	</script>
+	 <br/>
+	<strong>device控制测试</strong>
+	<br/>
+	<button onclick="deviceInfo()">打印设备信息</button>
+	<script>
+		function deviceInfo(){
+			JSBridge.request("device.info","",function(response){
+				for(var i in response.data){
+					console.log(response.data[i]);
+				}
+			})
 		}
 	</script>
 </body>
